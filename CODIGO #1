@@ -1,0 +1,16 @@
+drop function UsuarioTotal;
+-- HECHO POR DALLIAT
+DELIMITER $
+
+CREATE FUNCTION UsuarioTotal()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE ut INT;
+    SELECT COUNT(*) INTO ut FROM usuario;
+    RETURN ut;
+END $
+DELIMITER ;
+
+-- Llamar a la función
+SELECT UsuarioTotal() as "total de usuarios registrados";

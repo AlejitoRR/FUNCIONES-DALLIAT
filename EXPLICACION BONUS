@@ -1,8 +1,0 @@
-
-Creamos un procedimiento con nuestras bases de datos, en donde nos va a indicar cual es la calificacion promedio
-de un emprendedor seleccionado mediante el parametro que le ingresemos a la funcion, pues gracias a ese parametro vamos a 
-saber de que emprendimiento hablamos, entonces ya podemos aplicar un where en la tabla correcta y extraer el nombre 
-del emprendimiento, eso lo guardamos en una variable.
-Luego con SUM pedimos que cuente las calificaciones que tengan como id el parametro que pedimos en la funcion y que lo divida 
-con la cantidad de calificaciones que tiene para asi sacar el promedio de calificacion.
-Al final se pide que se muestren esos datos.

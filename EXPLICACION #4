@@ -1,3 +1,0 @@
-Función 4
-En esta función lo que vamos a conseguir es hallar cuántos usuarios se encuentran registrados con el rol de "emprendedor"
-para esto dentro de la función crearemos una variable la cual nos guardara el conteo que hace al recorrer la tabla emprendedor.

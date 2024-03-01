@@ -1,0 +1,11 @@
+Delimiter //
+CREATE FUNCTION EmprendedoresTotal()
+RETURNS int
+Begin
+	DECLARE et int;
+	SELECT count(*) INTO et FROM emprendimiento;
+    RETURN et;
+End;
+// Delimiter 
+
+select EmprendedoresTotal();

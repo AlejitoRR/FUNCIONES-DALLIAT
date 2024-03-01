@@ -1,0 +1,6 @@
+Esta funcion nos retornará el valor que indica las veces que se ha vendido un determinado producto.
+primero creamos 2 variables "totalvendidos" "nombreProducto" que van a recibir los valores.
+"totalvendidos" recibirá la suma de cantidades que se han vendido del producto (SUM(cantidad)),
+que se identifica gracias al "where". 
+luego guardamos la descripcion del producto en la variable "nombreproducto", para que al final podamos retornarlo todo junto
+con ayuda del concat().

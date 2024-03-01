@@ -1,0 +1,22 @@
+-- HECHO POR DALLIAT 
+DELIMITER $
+CREATE PROCEDURE promedioPuntuaciones(IN identEmprendimiento INT)
+BEGIN
+    DECLARE guardarSuma INT;
+    DECLARE total INT;
+    DECLARE emprendimientoNombre VARCHAR(255);
+    
+    SELECT nombreEmprendimiento INTO emprendimientoNombre
+    FROM emprendimiento
+    WHERE idEmprendimiento = identEmprendimiento;
+
+    SELECT SUM(calificaciones) / COUNT(*) INTO guardarSuma
+    FROM calificacionesdelemprendimiento
+    WHERE idEmprendimiento = identEmprendimiento;
+    SELECT emprendimientoNombre AS "NOMBRE DEL EMPRENDIMIENTO", guardarSuma AS "PROMEDIO DE CALIFICACION";
+END $
+DELIMITER ;
+CALL promedioPuntuaciones(2);
+
+
+

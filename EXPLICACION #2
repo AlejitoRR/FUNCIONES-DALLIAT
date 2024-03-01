@@ -1,0 +1,5 @@
+Función 2
+En esta función lo que vamos a conseguir es la información de un usuario para esto necesitaremos 
+un parámetro de entrada el cual será el ID que tiene el usuario, dentro de la función vamos a utilizar 
+(concat) para concatenar el nombre, apellido,
+número de celular y correo esto lo almacenaremos en una variable y luego a la función le vamos a retornar esta variable.

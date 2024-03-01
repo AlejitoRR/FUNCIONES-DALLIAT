@@ -1,0 +1,4 @@
+Función 1
+En esta función lo que vamos a conseguir es hallar cuántos usuarios se encuentran registrados con el rol de "usuario"
+para esto dentro de la función crearemos una variable la cual nos guardara el conteo que hace al recorrer la tabla usuario.
+Este conteo lo lograremos por medio de COUNT(*) en donde le especificamos con el FROM que tiene que contar en la tabla de usuarios.

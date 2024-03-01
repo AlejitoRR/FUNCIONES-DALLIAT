@@ -1,0 +1,15 @@
+drop function InfoUsuario;
+-- HECHO POR DALLIAT
+Delimiter //
+CREATE FUNCTION InfoUsuario(id int)
+RETURNS Varchar(200)
+Begin
+	DECLARE iu varchar(200);
+	SELECT concat("Nombre: ",NombreUsuario, " \n Apellido: ",ApellidoUsuario,
+    "\n Numero de celular: ",NumeroCelular, " \n Correo  ",Correo) 
+    INTO iu FROM usuario WHERE idUsuario=id;
+    RETURN iu;
+End;
+// Delimiter 
+
+select InfoUsuario(3) as "INFORMACION DEL USUARIO";

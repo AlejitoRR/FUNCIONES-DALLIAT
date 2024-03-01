@@ -1,0 +1,20 @@
+drop function vecesvendido;
+DELIMITER $
+CREATE FUNCTION vecesvendido(vendido INT) RETURNS VARCHAR(100)
+BEGIN
+    DECLARE totalvendidos INT;
+    DECLARE nombreProducto VARCHAR(100);
+
+    SELECT DescripcionProducto INTO nombreProducto
+    FROM producto
+    WHERE idProducto = vendido;
+    
+    SELECT SUM(cantidad) INTO totalvendidos
+    FROM detallepedido
+    WHERE idProducto = vendido;
+
+    RETURN CONCAT(nombreProducto, ': ', totalvendidos);
+END $
+DELIMITER ;
+SELECT vecesvendido(3) as "Cantidad de ventas del producto";
+
